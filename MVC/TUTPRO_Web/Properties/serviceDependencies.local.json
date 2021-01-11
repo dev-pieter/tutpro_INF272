@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/tutpro-webdbserver/databases/TUTPRO_Web_db",
+      "type": "mssql.azure",
+      "connectionId": "TUTPROEntities",
+      "secretStore": "LocalSecretsFile"
+    }
+  }
+}

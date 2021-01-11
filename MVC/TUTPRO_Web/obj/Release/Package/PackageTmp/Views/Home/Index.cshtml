@@ -1,0 +1,77 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <!--Style sheet does not link with loginBox2, find way to use style sheet instead of style in html-->
+<style>
+    .loginBox2 {
+        width: 420px;
+        height: 420px;
+        background: transparent;
+        background-color: #18191a;
+        color: white;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 40px 30px;
+        justify-content: space-around;
+        border-radius: 25px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="indexBox" style="background-image: url('../Images/building_bg.png')">
+
+        <div style="background-color: transparent ; height: 18vh;">
+            <img src="~/Images/newlogo-removebg-preview2.png" class="logocompanyReg">
+
+        </div>
+        <div class="loginBox2">
+            <h1 style="font-size: x-large;">Login</h1>
+
+            <form action="@Url.Action("User", "Home")" style="justify-content: space-around;">
+
+                <div>
+                    <label for="">UserName: </label>
+                    @Html.TextBox("username", null, new { @class = "form-control", @type = "text", required = "required" ,placeholder = "Enter UserName"})
+                </div>
+                <div>
+                    <label for="">Password: </label>
+                    @Html.TextBox("password", null, new { @class = "form-control", @type = "password", required = "required", placeholder = "Enter Password" })
+                </div>
+                <div>
+                    <br />
+                    <button href="@Url.Action("Home", "User")" class="IndexLogin">Login User</button> <br />
+                </div>                          
+                <a href="@Url.Action("ForgotPassword","Home")" type="btn" style="color: white;">Forgot Password?</a>
+               
+                <div>
+                    <br />
+                    <a href="@Url.Action("Register", "Home")" style="color: white;">Register as a Student!</a>
+                    <br>
+                    <a href="@Url.Action("RegisterTutor", "Home")" style="color: white;">Register as a Tutor!</a>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+

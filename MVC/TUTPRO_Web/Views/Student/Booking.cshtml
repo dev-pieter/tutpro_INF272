@@ -1,0 +1,165 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body style="background-color: #F8F9FA;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="~/Images/newlogo-removebg-preview2.png" /></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 5em;">
+            <ul class="navbar-nav mr-auto" style="justify-content:space-around; width: 40vw; ">
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Home", "Student")">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Profile", "Student")">My Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Contact", "Student")">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("About", "Student")">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Booking", "Student")">Bookings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("googleDrive", "Student")">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("ReviewTutor", "Student")">Review Tutor</a>
+                </li>
+
+            </ul>
+            <div style="width: 10%" />
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" style="text-decoration:none;">
+                    <a class="nav-link effect-underline" href="@Url.Action("Index", "Home")"><b>Sign Out</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Fix styling for bookings basically-->
+    <div class="calendar" style="padding-top: 5%; background-color:#F8F9FA">
+        <iframe src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%234285F4&amp;ctz=Africa%2FJohannesburg&amp;src=dTE4MDU5NTA0QHR1a3MuY28uemE&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4uc2EjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%230B8043&amp;showTitle=0&amp;showNav=0&amp;showTz=0&amp;showCalendars=0&amp;showTabs=0&amp;mode=WEEK&amp;showPrint=0" style="border-width:0" width="800" height="400" frameborder="0" scrolling="no"></iframe>
+        <div class="input">
+            <h3>Book your session</h3>
+            <p style="padding-bottom: 20px;">See the sessions available on the calendar to the left</p>
+
+
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Select Session
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Please fill in fields related to your session</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Username</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username" required>
+                            </div>
+                            <br />
+                            <div class="form-inline">
+                                <select class="form-control" id="list" style="width: 200px; margin-bottom: 20px;">
+                                    <option>Grade(Disabled) </option>
+                                    <option>Grade 12</option>
+                                    <option>Grade 11</option>
+                                    <option>Grade 10</option>
+                                </select>
+                                <br />
+                                <select class="form-control" id="list" style="width: 200px; margin-bottom: 20px;">
+                                    <option>Year(Disabled) </option>
+                                    <option>First Year</option>
+                                    <option>Second Year</option>
+                                    <option>Third Year</option>
+                                </select>
+                            </div>
+                            <br />
+                            <div class="form-inline">
+                                <select class="form-control" id="list" style="width: 200px; margin-bottom: 20px;">
+                                    <option>Subject(Disabled) </option>
+                                    <option>Math</option>
+                                    <option>English</option>
+                                    <option>Accounting</option>
+                                </select>
+                                <br />
+                                <select class="form-control" id="list" style="width: 200px; margin-bottom: 20px;">
+                                    <option>Module(Disabled) </option>
+                                    <option>INF 271</option>
+                                    <option>INF 171</option>
+                                    <option>INF 164</option>
+                                </select>
+                            </div>
+
+                            @*<input class="btn btn-dark" type="submit" value="Submit"*@
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Back</button>
+                            <a href="@Url.Action("RegisterSuccess", "Student")" class="btn btn-primary">Submit</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="col-6">
+      <h3 style="color:black">Register a session</h3>
+      <p>Register the session prior to tutoring</p><br>
+
+      <div style="margin-right:85% ">
+          <form action="RegisterSuccess.html" >
+              Session start:
+              <input class="form-control"  type="time" id="start" name="start" min="7:00" max="18:00" required><br>
+              Session end:
+              <input class="form-control"  type="time" id="end" name="end" min="8:00" max="19:00" required><br>
+              <input class="btn btn-dark" type="submit" value="Submit" >
+          </form>
+      </div>
+    </div> -->
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+</body>
+</html>

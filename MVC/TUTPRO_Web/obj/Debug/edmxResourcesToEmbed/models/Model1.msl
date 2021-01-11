@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TUTPRO_Web_dbModelStoreContainer" CdmEntityContainer="TUTPRO_Web_dbEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="Admin_ID" ColumnName="Admin_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Application">
+        <MappingFragment StoreEntitySet="Application">
+          <ScalarProperty Name="Application_ID" ColumnName="Application_ID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bookings">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Booking">
+        <MappingFragment StoreEntitySet="Booking">
+          <ScalarProperty Name="Booking_ID" ColumnName="Booking_ID" />
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Tutor_ID" ColumnName="Tutor_ID" />
+          <ScalarProperty Name="Session_ID" ColumnName="Session_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Degrees">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Degree">
+        <MappingFragment StoreEntitySet="Degree">
+          <ScalarProperty Name="Degree_ID" ColumnName="Degree_ID" />
+          <ScalarProperty Name="DegreeName" ColumnName="DegreeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Demerits">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Demerit">
+        <MappingFragment StoreEntitySet="Demerit">
+          <ScalarProperty Name="Demerit1" ColumnName="Demerit" />
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="DemeritDescription" ColumnName="DemeritDescription" />
+          <ScalarProperty Name="DemeritDate" ColumnName="DemeritDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grades">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Grade">
+        <MappingFragment StoreEntitySet="Grade">
+          <ScalarProperty Name="Grade_ID" ColumnName="Grade_ID" />
+          <ScalarProperty Name="GradeName" ColumnName="GradeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HighSchoolStudents">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.HighSchoolStudent">
+        <MappingFragment StoreEntitySet="HighSchoolStudent">
+          <ScalarProperty Name="HighSchoolStudent_ID" ColumnName="HighSchoolStudent_ID" />
+          <ScalarProperty Name="Grade_ID" ColumnName="Grade_ID" />
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modules">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Module">
+        <MappingFragment StoreEntitySet="Module">
+          <ScalarProperty Name="Module_ID" ColumnName="Module_ID" />
+          <ScalarProperty Name="ModuleCode" ColumnName="ModuleCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resources">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Resource">
+        <MappingFragment StoreEntitySet="Resource">
+          <ScalarProperty Name="Resource_ID" ColumnName="Resource_ID" />
+          <ScalarProperty Name="Module_ID" ColumnName="Module_ID" />
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+          <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reviews">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Review">
+        <MappingFragment StoreEntitySet="Review">
+          <ScalarProperty Name="Review_ID" ColumnName="Review_ID" />
+          <ScalarProperty Name="Tutor_ID" ColumnName="Tutor_ID" />
+          <ScalarProperty Name="StarRating" ColumnName="StarRating" />
+          <ScalarProperty Name="ReviewDate" ColumnName="ReviewDate" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sessions">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Session">
+        <MappingFragment StoreEntitySet="Session">
+          <ScalarProperty Name="Session_ID" ColumnName="Session_ID" />
+          <ScalarProperty Name="Module_ID" ColumnName="Module_ID" />
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+          <ScalarProperty Name="GoogleMeetLink" ColumnName="GoogleMeetLink" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="StudentType_ID" ColumnName="StudentType_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentTypes">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.StudentType">
+        <MappingFragment StoreEntitySet="StudentType">
+          <ScalarProperty Name="StudentType_ID" ColumnName="StudentType_ID" />
+          <ScalarProperty Name="TypeofStudent" ColumnName="TypeofStudent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subjects">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Subject">
+        <MappingFragment StoreEntitySet="Subject">
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+          <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tutors">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.Tutor">
+        <MappingFragment StoreEntitySet="Tutor">
+          <ScalarProperty Name="Tutor_ID" ColumnName="Tutor_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TutorModules">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.TutorModule">
+        <MappingFragment StoreEntitySet="TutorModule">
+          <ScalarProperty Name="TutorModule_ID" ColumnName="TutorModule_ID" />
+          <ScalarProperty Name="Tutor_ID" ColumnName="Tutor_ID" />
+          <ScalarProperty Name="Module_ID" ColumnName="Module_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TutorSubjects">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.TutorSubject">
+        <MappingFragment StoreEntitySet="TutorSubject">
+          <ScalarProperty Name="TutorSubject_ID" ColumnName="TutorSubject_ID" />
+          <ScalarProperty Name="Tutor_ID" ColumnName="Tutor_ID" />
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UniversityStudents">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.UniversityStudent">
+        <MappingFragment StoreEntitySet="UniversityStudent">
+          <ScalarProperty Name="University_Account" ColumnName="University_Account" />
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Degree_ID" ColumnName="Degree_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="UserType_ID" ColumnName="UserType_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTypes">
+      <EntityTypeMapping TypeName="TUTPRO_Web_dbModel.UserType">
+        <MappingFragment StoreEntitySet="UserType">
+          <ScalarProperty Name="UserType_ID" ColumnName="UserType_ID" />
+          <ScalarProperty Name="UserDescription" ColumnName="UserDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

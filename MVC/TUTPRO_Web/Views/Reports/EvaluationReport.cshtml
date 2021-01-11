@@ -1,0 +1,653 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+
+<head>
+    <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+    <meta name=Generator content="Microsoft Word 15 (filtered)">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <style>
+
+        /* Font Definitions */
+
+        /* Style Definitions */
+        p.MsoNormal, li.MsoNormal, div.MsoNormal {
+            margin-top: 2.0pt;
+            margin-right: 0cm;
+            margin-bottom: 2.0pt;
+            margin-left: 0cm;
+            font-size: 10.0pt;
+            font-family: "Franklin Gothic Book",sans-serif;
+        }
+
+        h1 {
+            mso-style-link: "Heading 1 Char";
+            margin-top: 0cm;
+            margin-right: 0cm;
+            margin-bottom: 3.0pt;
+            margin-left: 0cm;
+            font-size: 12.0pt;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+            h1.CxSpFirst {
+                mso-style-link: "Heading 1 Char";
+                margin: 0cm;
+                font-size: 12.0pt;
+                font-family: "Franklin Gothic Medium",sans-serif;
+                color: #006666;
+                text-transform: uppercase;
+            }
+
+            h1.CxSpMiddle {
+                mso-style-link: "Heading 1 Char";
+                margin: 0cm;
+                font-size: 12.0pt;
+                font-family: "Franklin Gothic Medium",sans-serif;
+                color: #006666;
+                text-transform: uppercase;
+            }
+
+            h1.CxSpLast {
+                mso-style-link: "Heading 1 Char";
+                margin-top: 0cm;
+                margin-right: 0cm;
+                margin-bottom: 3.0pt;
+                margin-left: 0cm;
+                font-size: 12.0pt;
+                font-family: "Franklin Gothic Medium",sans-serif;
+                color: #006666;
+                text-transform: uppercase;
+            }
+
+        h2 {
+            mso-style-link: "Heading 2 Char";
+            margin-top: 2.0pt;
+            margin-right: 0cm;
+            margin-bottom: 0cm;
+            margin-left: 0cm;
+            page-break-after: avoid;
+            font-size: 10.0pt;
+            font-family: "Franklin Gothic Book",sans-serif;
+            color: white;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        p.MsoTitle, li.MsoTitle, div.MsoTitle {
+            mso-style-link: "Title Char";
+            margin-top: 20.0pt;
+            margin-right: 0cm;
+            margin-bottom: 8.0pt;
+            margin-left: 0cm;
+            text-align: center;
+            font-size: 36.0pt;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+        p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst {
+            mso-style-link: "Title Char";
+            margin-top: 20.0pt;
+            margin-right: 0cm;
+            margin-bottom: 0cm;
+            margin-left: 0cm;
+            text-align: center;
+            font-size: 36.0pt;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+        p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle {
+            mso-style-link: "Title Char";
+            margin: 0cm;
+            text-align: center;
+            font-size: 36.0pt;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+        p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast {
+            mso-style-link: "Title Char";
+            margin-top: 0cm;
+            margin-right: 0cm;
+            margin-bottom: 8.0pt;
+            margin-left: 0cm;
+            text-align: center;
+            font-size: 36.0pt;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+        span.TitleChar {
+            mso-style-name: "Title Char";
+            mso-style-link: Title;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+        span.Heading1Char {
+            mso-style-name: "Heading 1 Char";
+            mso-style-link: "Heading 1";
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        span.Heading2Char {
+            mso-style-name: "Heading 2 Char";
+            mso-style-link: "Heading 2";
+            font-family: "Times New Roman",serif;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        p.Graphic, li.Graphic, div.Graphic {
+            mso-style-name: Graphic;
+            margin-top: 2.0pt;
+            margin-right: .7pt;
+            margin-bottom: 0cm;
+            margin-left: 0cm;
+            text-align: right;
+            font-size: 10.0pt;
+            font-family: "Franklin Gothic Book",sans-serif;
+        }
+
+        p.ContactInfo, li.ContactInfo, div.ContactInfo {
+            mso-style-name: "Contact Info";
+            margin-top: 2.0pt;
+            margin-right: 0cm;
+            margin-bottom: 0cm;
+            margin-left: 0cm;
+            font-size: 12.0pt;
+            font-family: "Franklin Gothic Book",sans-serif;
+            color: #FEDE00;
+            font-weight: bold;
+        }
+
+        .MsoChpDefault {
+            font-size: 10.0pt;
+            font-family: "Franklin Gothic Book",sans-serif;
+            color: #595959;
+        }
+
+        .MsoPapDefault {
+            margin-top: 2.0pt;
+            margin-right: 0cm;
+            margin-bottom: 2.0pt;
+            margin-left: 0cm;
+        }
+
+        div.WordSection1 {
+            page: WordSection1;
+        }
+        /* List Definitions */
+        ol {
+            margin-bottom: 0cm;
+        }
+
+        ul {
+            margin-bottom: 0cm;
+        }
+        -->
+    </style>
+
+</head>
+
+<body lang=EN-ZA>
+
+    <div class=WordSection1>
+
+        <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.14%;border-collapse:
+ collapse'>
+            <tr style='height:80.85pt'>
+                <td width=18 valign=top style='width:13.5pt;background:#006666;padding:0cm 0cm 0cm 0cm;
+  height:80.85pt'>
+                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+                </td>
+                <td width=516 style='width:387.0pt;border:none;border-right:solid white 4.5pt;
+  background:#006666;padding:0cm 0cm 0cm 0cm;height:80.85pt'>
+                    <p class=ContactInfo><span lang=EN-US>TUTPRO</span></p>
+                    <p class=ContactInfo><span lang=EN-US>57 West Lynwood Bridge, Pretoria, 0001</span></p>
+                    <p class=ContactInfo><span lang=EN-US>tutpro@gmail.com</span></p>
+                    <p class=ContactInfo><span lang=EN-US>0800420789</span></p>
+                </td>
+                <td width=222 style='width:166.5pt;border:none;background:#006666;padding:
+  0cm 0cm 0cm 0cm;height:80.85pt'>
+                    <p class=Graphic>
+                        <img width=124 height=179
+                             src="~/Images/newlogo-removebg-preview2.png" align=left hspace=12>
+                    </p>
+                </td>
+                <td width=12 valign=top style='width:9.0pt;background:#006666;padding:0cm 0cm 0cm 0cm;
+  height:80.85pt'>
+                    <p class=Graphic><span lang=EN-US style='color:#006666'>&nbsp;</span></p>
+                </td>
+                <td style='border:none;padding:0cm 0cm 0cm 0cm' width=1><p class='MsoNormal'>&nbsp;</td>
+            </tr>
+            <tr style='height:58.35pt'>
+                <td width=769 colspan=5 valign=bottom style='width:576.8pt;padding:0cm 0cm 0cm 0cm;
+  height:58.35pt'>
+                    <p class=MsoTitle><span lang=EN-US>Evaluation report</span></p>
+                </td>
+            </tr>
+            <tr style='height:43.2pt'>
+                <td width=769 colspan=5 valign=bottom style='width:576.8pt;border:none;
+  border-bottom:solid #FEDE00 2.25pt;padding:0cm 0cm 0cm 0cm;height:43.2pt'>
+                    <h1><span lang=EN-US>Report summary</span></h1>
+                </td>
+            </tr>
+            <tr style='height:10.8pt'>
+                <td width=769 colspan=5 valign=top style='width:576.8pt;border:none;
+  padding:0cm 0cm 0cm 0cm;height:10.8pt'>
+                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=StatusReportTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="63%" style='width:63.7%;border-collapse:
+ collapse'>
+            <tr style='height:16.55pt'>
+                <td width=209 valign=top style='width:157.1pt;border:none;border-right:solid white 1.5pt;
+  background:#006666;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2>
+                        <span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>
+                            Report
+                            Date
+                        </span>
+                    </h2>
+                </td>
+                <td width=280 valign=top style='width:209.8pt;border:none;background:#006666;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2>
+                        <span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>
+                            Prepared
+                            By
+                        </span>
+                    </h2>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=209 valign=top style='width:157.1pt;border-top:solid white 1.5pt;
+  border-left:none;border-bottom:none;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><span lang=EN-US style='color:black'>25/08/2020</span></p>
+                </td>
+                <td width=280 valign=top style='width:209.8pt;border:none;border-top:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><span lang=EN-US style='color:black'>Mr MI Chhaya</span></p>
+                </td>
+            </tr>
+        </table>
+
+        <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.14%;border-collapse:
+ collapse;border:none'>
+            <tr style='height:36.0pt'>
+                <td width=769 valign=bottom style='width:576.8pt;border:none;border-bottom:
+  solid #FEDE00 2.25pt;padding:0cm 0cm 0cm 0cm;height:36.0pt'>
+                    <h1><span lang=EN-US>Student Demerits </span></h1>
+                </td>
+            </tr>
+            <tr style='height:10.8pt'>
+                <td width=769 style='width:576.8pt;border:none;padding:0cm 0cm 0cm 0cm;
+  height:10.8pt'>
+                    <p class=MsoNormal style='margin-bottom:0cm'><span lang=EN-US>&nbsp;</span></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=StatusReportTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.0%;border-collapse:
+ collapse'>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:144.0pt;border:none;border-right:solid white 1.5pt;
+  background:#006666;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2>
+                        <span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>
+                            Tutor
+                            ID
+                        </span>
+                    </h2>
+                </td>
+                <td width=77 valign=top style='width:57.6pt;border:none;border-right:solid white 1.5pt;
+  background:#006666;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2>
+                        <span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>
+                            Student
+                            ID
+                        </span>
+                    </h2>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:none;border-right:solid white 1.5pt;
+  background:#006666;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2><span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>Date</span></h2>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:none;border-right:solid white 1.5pt;
+  background:#006666;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2><span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>Reason</span></h2>
+                </td>
+                <td width=192 valign=top style='width:144.0pt;border:none;background:#006666;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2>
+                        <span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>
+                            Total
+                            number of demerits
+                        </span>
+                    </h2>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:144.0pt;border:solid white 1.5pt;
+  border-left:none;background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>T15236523</span></b></p>
+                </td>
+                <td width=77 valign=top style='width:57.6pt;border:solid white 1.5pt;
+  border-left:none;background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>S45689632</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:solid white 1.5pt;
+  border-left:none;background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>21/08/2020</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:solid white 1.5pt;
+  border-left:none;background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal>
+                        <b>
+                            <span lang=EN-US style='color:black'>
+                                Being vulgar
+                                during sessions.
+                            </span>
+                        </b>
+                    </p>
+                </td>
+                <td width=192 valign=top style='width:144.0pt;border-top:solid white 1.5pt;
+  border-left:none;border-bottom:solid white 1.5pt;border-right:none;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>2</span></b></p>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>T14236985</span></b></p>
+                </td>
+                <td width=77 valign=top style='width:57.6pt;border-top:none;border-left:none;
+  border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;background:
+  #E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>S48962365</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>19/08/2020</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal>
+                        <b>
+                            <span lang=EN-US style='color:black'>
+                                Disrespecting
+                                fellow peers.
+                            </span>
+                        </b>
+                    </p>
+                </td>
+                <td width=192 valign=top style='width:144.0pt;border:none;border-bottom:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>1</span></b></p>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:144.0pt;border:none;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>T59236545</span></b></p>
+                </td>
+                <td width=77 valign=top style='width:57.6pt;border:none;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>S45963214</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:none;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>15/08/2020</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:none;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal>
+                        <b>
+                            <span lang=EN-US style='color:black'>
+                                30 minutes late to
+                                the session.
+                            </span>
+                        </b>
+                    </p>
+                </td>
+                <td width=192 valign=top style='width:144.0pt;border:none;background:#E5EAEE;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>1</span></b></p>
+                </td>
+            </tr>
+        </table>
+
+        <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.14%;border-collapse:
+ collapse;border:none'>
+            <tr style='height:36.0pt'>
+                <td width=769 valign=bottom style='width:576.8pt;border:none;border-bottom:
+  solid #FEDE00 2.25pt;padding:0cm 0cm 0cm 0cm;height:36.0pt'>
+                    <h1><span lang=EN-US>Tutor ReVIEWS </span></h1>
+                </td>
+            </tr>
+            <tr style='height:10.8pt'>
+                <td width=769 style='width:576.8pt;border:none;padding:0cm 0cm 0cm 0cm;
+  height:10.8pt'>
+                    <p class=MsoNormal style='margin-bottom:0cm'><span lang=EN-US>&nbsp;</span></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=StatusReportTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.0%;border-collapse:
+ collapse'>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:144.0pt;border:none;border-right:solid white 1.5pt;
+  background:#006666;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2>
+                        <span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>
+                            Tutor
+                            ID
+                        </span>
+                    </h2>
+                </td>
+                <td width=77 valign=top style='width:57.6pt;border:none;border-right:solid white 1.5pt;
+  background:#006666;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2>
+                        <span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>
+                            Student
+                            ID
+                        </span>
+                    </h2>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:none;border-right:solid white 1.5pt;
+  background:#006666;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2><span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>Date</span></h2>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:none;border-right:solid white 1.5pt;
+  background:#006666;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2><span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>Review</span></h2>
+                </td>
+                <td width=192 valign=top style='width:144.0pt;border:none;background:#006666;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <h2>
+                        <span lang=EN-US style='font-family:"Franklin Gothic Medium",sans-serif'>
+                            Star
+                            Rating
+                        </span>
+                    </h2>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:144.0pt;border:solid white 1.5pt;
+  border-left:none;background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>T85632000</span></b></p>
+                </td>
+                <td width=77 valign=top style='width:57.6pt;border:solid white 1.5pt;
+  border-left:none;background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>S56987452</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:solid white 1.5pt;
+  border-left:none;background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>23/08/2020</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:solid white 1.5pt;
+  border-left:none;background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal>
+                        <b>
+                            <span lang=EN-US style='color:black'>
+                                Finally helped me
+                                understand how MVC works in INF 272.
+                            </span>
+                        </b>
+                    </p>
+                </td>
+                <td width=192 valign=top style='width:144.0pt;border-top:solid white 1.5pt;
+  border-left:none;border-bottom:solid white 1.5pt;border-right:none;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal>
+                        <span style='position:absolute;z-index:251674624;
+  margin-left:112px;margin-top:9px;width:24px;height:20px'>
+                            <img width=24
+                                 height=20 src="~/Images/image002.png">
+                        </span><span style='position:absolute;z-index:251668480;margin-left:86px;margin-top:9px;
+  width:24px;height:20px'>
+                            <img width=24 height=20
+                                 src="~/Images/image002.png">
+                        </span><span style='position:absolute;z-index:251672576;margin-left:60px;margin-top:9px;
+  width:24px;height:20px'>
+                            <img width=24 height=20
+                                 src="~/Images/image002.png">
+                        </span><span style='position:absolute;z-index:251670528;margin-left:33px;margin-top:9px;
+  width:24px;height:20px'>
+                            <img width=24 height=20
+                                 src="~/Images/image002.png">
+                        </span><span style='position:absolute;z-index:251660288;margin-left:4px;margin-top:10px;
+  width:24px;height:20px'>
+                            <img width=24 height=20
+                                 src="~/Images/image002.png">
+                        </span>
+                    </p>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>T45217788</span></b></p>
+                </td>
+                <td width=77 valign=top style='width:57.6pt;border-top:none;border-left:none;
+  border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;background:
+  #E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>S12365899</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>16/08/2020</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border-top:none;border-left:
+  none;border-bottom:solid white 1.5pt;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal>
+                        <b>
+                            <span lang=EN-US style='color:black'>
+                                We had to wait 30
+                                minutes for the tutor to start the session!
+                            </span>
+                        </b>
+                    </p>
+                </td>
+                <td width=192 valign=top style='width:144.0pt;border:none;border-bottom:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal>
+                        <span style='position:absolute;z-index:251678720;
+  margin-left:34px;margin-top:2px;width:24px;height:20px'>
+                            <img width=24
+                                 height=20 src="~/Images/image002.png">
+                        </span><span style='position:absolute;z-index:251676672;margin-left:5px;margin-top:2px;
+  width:24px;height:20px'>
+                            <img width=24 height=20
+                                 src="~/Images/image002.png">
+                        </span>
+                    </p>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:144.0pt;border:none;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>T21003369</span></b></p>
+                </td>
+                <td width=77 valign=top style='width:57.6pt;border:none;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>S78110022</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:none;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span lang=EN-US style='color:black'>10/08/2020</span></b></p>
+                </td>
+                <td width=154 valign=top style='width:115.2pt;border:none;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal>
+                        <b>
+                            <span lang=EN-US style='color:black'>
+                                The tutor was rude
+                                to us and did not want to explain us the work when we asked questions.
+                            </span>
+                        </b>
+                    </p>
+                </td>
+                <td width=192 valign=top style='width:144.0pt;border:none;background:#E5EAEE;
+  padding:0cm 5.4pt 0cm 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal>
+                        <span style='position:absolute;z-index:251680768;
+  margin-left:5px;margin-top:3px;width:24px;height:20px'>
+                            <img width=24
+                                 height=20 src="~/Images/image002.png">
+                        </span>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+    </div>
+    @*<div style="padding:3em">
+        <button class="btn btn-success">Export As PDF</button>
+    </div>*@
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body style="background-color: #F8F9FA">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="~/Images/newlogo-removebg-preview2.png" /></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 5em;">
+            <ul class="navbar-nav mr-auto" style="justify-content:space-around; width: 40vw; ">
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Home", "Tutor")">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Profile", "Tutor")">My Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Contact", "Tutor")">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("About", "Tutor")">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("googleDrive", "Tutor")">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("LogSession", "Tutor")">LogSession</a>
+                </li>
+
+            </ul>
+            <div style="width: 10%" />
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" style="text-decoration:none;">
+                    <a class="nav-link effect-underline" href="@Url.Action("Index", "Home")"><b>Sign Out</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div style="width: 100vw; display: flex; justify-content: center; padding-top: 5%;">
+        <div style="width: 20%; text-align: center;">
+            <h3 style="text-align: center; padding-bottom: 20px; color:lightslategrey">You can contact us at:</h3>
+            <div style="display: flex; justify-content: space-around;">
+                <p><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram fa-4x" style="color:deeppink" aria-hidden="true"></i></a></p>
+                <p><a href="https://www.facebook.com/"><i class="fa fa-facebook-official fa-4x" style="color:darkblue" aria-hidden="true"></i></a></p>
+                <p><a href="https://twitter.com/explore"><i class="fa fa-twitter fa-4x" aria-hidden="true"></i></a></p>
+                <p><a href="https://www.google.com/gmail/"><i class="fa fa-envelope fa-4x" style="color:red" aria-hidden="true"></i></a></p>
+
+            </div>
+            <p style="color: lightslategrey">Whatsapp : 0800420789</p>
+            <P style="color:lightslategrey">Address at 57 West Lynwood bridge </P>
+
+
+        </div>
+    </div>
+    <br />
+    <div>
+
+    </div>
+
+    <div style="max-width: 100vw; ">
+        <img src="~/Images/footervector.png" / style="width:100vw;">
+    </div>
+
+</body>
+</html>

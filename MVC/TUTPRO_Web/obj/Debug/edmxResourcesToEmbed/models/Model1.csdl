@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TUTPRO_Web_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="Admin_ID" />
+    </Key>
+    <Property Name="Admin_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Admin_User" FromRole="Admin" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="Application_ID" />
+    </Key>
+    <Property Name="Application_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Application_User" FromRole="Application" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Booking">
+    <Key>
+      <PropertyRef Name="Booking_ID" />
+    </Key>
+    <Property Name="Booking_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Student_ID" Type="Int32" Nullable="false" />
+    <Property Name="Tutor_ID" Type="Int32" Nullable="false" />
+    <Property Name="Session_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Session" Relationship="Self.FK_Booking_Session" FromRole="Booking" ToRole="Session" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Booking_Student" FromRole="Booking" ToRole="Student" />
+    <NavigationProperty Name="Tutor" Relationship="Self.FK_Booking_Tutor" FromRole="Booking" ToRole="Tutor" />
+  </EntityType>
+  <EntityType Name="Degree">
+    <Key>
+      <PropertyRef Name="Degree_ID" />
+    </Key>
+    <Property Name="Degree_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DegreeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="UniversityStudents" Relationship="Self.FK_UniversityStudent_Degree" FromRole="Degree" ToRole="UniversityStudent" />
+  </EntityType>
+  <EntityType Name="Demerit">
+    <Key>
+      <PropertyRef Name="Demerit1" />
+    </Key>
+    <Property Name="Demerit1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Student_ID" Type="Int32" Nullable="false" />
+    <Property Name="DemeritDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DemeritDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Demerit_Student" FromRole="Demerit" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Grade">
+    <Key>
+      <PropertyRef Name="Grade_ID" />
+    </Key>
+    <Property Name="Grade_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GradeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="HighSchoolStudents" Relationship="Self.FK_HighSchoolStudent_Grade" FromRole="Grade" ToRole="HighSchoolStudent" />
+  </EntityType>
+  <EntityType Name="HighSchoolStudent">
+    <Key>
+      <PropertyRef Name="HighSchoolStudent_ID" />
+    </Key>
+    <Property Name="HighSchoolStudent_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Grade_ID" Type="Int32" Nullable="false" />
+    <Property Name="Student_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Grade" Relationship="Self.FK_HighSchoolStudent_Grade" FromRole="HighSchoolStudent" ToRole="Grade" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_HighSchoolStudent_Student" FromRole="HighSchoolStudent" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="Module_ID" />
+    </Key>
+    <Property Name="Module_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModuleCode" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Resources" Relationship="Self.FK_Resource_Module" FromRole="Module" ToRole="Resource" />
+    <NavigationProperty Name="Sessions" Relationship="Self.FK_Session_Module" FromRole="Module" ToRole="Session" />
+    <NavigationProperty Name="TutorModules" Relationship="Self.FK_TutorModule_Module" FromRole="Module" ToRole="TutorModule" />
+  </EntityType>
+  <EntityType Name="Resource">
+    <Key>
+      <PropertyRef Name="Resource_ID" />
+    </Key>
+    <Property Name="Resource_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Module_ID" Type="Int32" Nullable="false" />
+    <Property Name="Subject_ID" Type="Int32" Nullable="false" />
+    <Property Name="UploadDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Module" Relationship="Self.FK_Resource_Module" FromRole="Resource" ToRole="Module" />
+    <NavigationProperty Name="Subject" Relationship="Self.FK_Resource_Subject" FromRole="Resource" ToRole="Subject" />
+  </EntityType>
+  <EntityType Name="Review">
+    <Key>
+      <PropertyRef Name="Review_ID" />
+    </Key>
+    <Property Name="Review_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tutor_ID" Type="Int32" Nullable="false" />
+    <Property Name="StarRating" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ReviewDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Message" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tutor" Relationship="Self.FK_Review_Tutor" FromRole="Review" ToRole="Tutor" />
+  </EntityType>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="Session_ID" />
+    </Key>
+    <Property Name="Session_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Module_ID" Type="Int32" Nullable="false" />
+    <Property Name="Subject_ID" Type="Int32" Nullable="false" />
+    <Property Name="GoogleMeetLink" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Bookings" Relationship="Self.FK_Booking_Session" FromRole="Session" ToRole="Booking" />
+    <NavigationProperty Name="Module" Relationship="Self.FK_Session_Module" FromRole="Session" ToRole="Module" />
+    <NavigationProperty Name="Subject" Relationship="Self.FK_Session_Subject" FromRole="Session" ToRole="Subject" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Student_ID" />
+    </Key>
+    <Property Name="Student_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <Property Name="StudentType_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bookings" Relationship="Self.FK_Booking_Student" FromRole="Student" ToRole="Booking" />
+    <NavigationProperty Name="Demerits" Relationship="Self.FK_Demerit_Student" FromRole="Student" ToRole="Demerit" />
+    <NavigationProperty Name="HighSchoolStudents" Relationship="Self.FK_HighSchoolStudent_Student" FromRole="Student" ToRole="HighSchoolStudent" />
+    <NavigationProperty Name="StudentType" Relationship="Self.FK_Student_StudentType" FromRole="Student" ToRole="StudentType" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Student_User" FromRole="Student" ToRole="User" />
+    <NavigationProperty Name="UniversityStudents" Relationship="Self.FK_UniversityStudent_Student" FromRole="Student" ToRole="UniversityStudent" />
+  </EntityType>
+  <EntityType Name="StudentType">
+    <Key>
+      <PropertyRef Name="StudentType_ID" />
+    </Key>
+    <Property Name="StudentType_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeofStudent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_Student_StudentType" FromRole="StudentType" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="Subject_ID" />
+    </Key>
+    <Property Name="Subject_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Resources" Relationship="Self.FK_Resource_Subject" FromRole="Subject" ToRole="Resource" />
+    <NavigationProperty Name="Sessions" Relationship="Self.FK_Session_Subject" FromRole="Subject" ToRole="Session" />
+    <NavigationProperty Name="TutorSubjects" Relationship="Self.FK_TutorSubject_Subject" FromRole="Subject" ToRole="TutorSubject" />
+  </EntityType>
+  <EntityType Name="Tutor">
+    <Key>
+      <PropertyRef Name="Tutor_ID" />
+    </Key>
+    <Property Name="Tutor_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bookings" Relationship="Self.FK_Booking_Tutor" FromRole="Tutor" ToRole="Booking" />
+    <NavigationProperty Name="Reviews" Relationship="Self.FK_Review_Tutor" FromRole="Tutor" ToRole="Review" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Tutor_User" FromRole="Tutor" ToRole="User" />
+    <NavigationProperty Name="TutorModules" Relationship="Self.FK_TutorModule_Tutor" FromRole="Tutor" ToRole="TutorModule" />
+    <NavigationProperty Name="TutorSubjects" Relationship="Self.FK_TutorSubject_Tutor" FromRole="Tutor" ToRole="TutorSubject" />
+  </EntityType>
+  <EntityType Name="TutorModule">
+    <Key>
+      <PropertyRef Name="TutorModule_ID" />
+    </Key>
+    <Property Name="TutorModule_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tutor_ID" Type="Int32" Nullable="false" />
+    <Property Name="Module_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Module" Relationship="Self.FK_TutorModule_Module" FromRole="TutorModule" ToRole="Module" />
+    <NavigationProperty Name="Tutor" Relationship="Self.FK_TutorModule_Tutor" FromRole="TutorModule" ToRole="Tutor" />
+  </EntityType>
+  <EntityType Name="TutorSubject">
+    <Key>
+      <PropertyRef Name="TutorSubject_ID" />
+    </Key>
+    <Property Name="TutorSubject_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tutor_ID" Type="Int32" Nullable="false" />
+    <Property Name="Subject_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Subject" Relationship="Self.FK_TutorSubject_Subject" FromRole="TutorSubject" ToRole="Subject" />
+    <NavigationProperty Name="Tutor" Relationship="Self.FK_TutorSubject_Tutor" FromRole="TutorSubject" ToRole="Tutor" />
+  </EntityType>
+  <EntityType Name="UniversityStudent">
+    <Key>
+      <PropertyRef Name="University_Account" />
+    </Key>
+    <Property Name="University_Account" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Student_ID" Type="Int32" Nullable="false" />
+    <Property Name="Degree_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Degree" Relationship="Self.FK_UniversityStudent_Degree" FromRole="UniversityStudent" ToRole="Degree" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_UniversityStudent_Student" FromRole="UniversityStudent" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserType_ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Admins" Relationship="Self.FK_Admin_User" FromRole="User" ToRole="Admin" />
+    <NavigationProperty Name="Applications" Relationship="Self.FK_Application_User" FromRole="User" ToRole="Application" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_Student_User" FromRole="User" ToRole="Student" />
+    <NavigationProperty Name="Tutors" Relationship="Self.FK_Tutor_User" FromRole="User" ToRole="Tutor" />
+    <NavigationProperty Name="UserType" Relationship="Self.FK_User_UserType" FromRole="User" ToRole="UserType" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="UserType_ID" />
+    </Key>
+    <Property Name="UserType_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_User_UserType" FromRole="UserType" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_Admin_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="Admin">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Application_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Application" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="Application">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Booking_Session">
+    <End Role="Session" Type="Self.Session" Multiplicity="1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Session">
+        <PropertyRef Name="Session_ID" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="Session_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Booking_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="Student_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Booking_Tutor">
+    <End Role="Tutor" Type="Self.Tutor" Multiplicity="1" />
+    <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tutor">
+        <PropertyRef Name="Tutor_ID" />
+      </Principal>
+      <Dependent Role="Booking">
+        <PropertyRef Name="Tutor_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UniversityStudent_Degree">
+    <End Role="Degree" Type="Self.Degree" Multiplicity="1" />
+    <End Role="UniversityStudent" Type="Self.UniversityStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Degree">
+        <PropertyRef Name="Degree_ID" />
+      </Principal>
+      <Dependent Role="UniversityStudent">
+        <PropertyRef Name="Degree_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Demerit_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Demerit" Type="Self.Demerit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="Demerit">
+        <PropertyRef Name="Student_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HighSchoolStudent_Grade">
+    <End Role="Grade" Type="Self.Grade" Multiplicity="1" />
+    <End Role="HighSchoolStudent" Type="Self.HighSchoolStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grade">
+        <PropertyRef Name="Grade_ID" />
+      </Principal>
+      <Dependent Role="HighSchoolStudent">
+        <PropertyRef Name="Grade_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HighSchoolStudent_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="HighSchoolStudent" Type="Self.HighSchoolStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="HighSchoolStudent">
+        <PropertyRef Name="Student_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resource_Module">
+    <End Role="Module" Type="Self.Module" Multiplicity="1" />
+    <End Role="Resource" Type="Self.Resource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="Module_ID" />
+      </Principal>
+      <Dependent Role="Resource">
+        <PropertyRef Name="Module_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Session_Module">
+    <End Role="Module" Type="Self.Module" Multiplicity="1" />
+    <End Role="Session" Type="Self.Session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="Module_ID" />
+      </Principal>
+      <Dependent Role="Session">
+        <PropertyRef Name="Module_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TutorModule_Module">
+    <End Role="Module" Type="Self.Module" Multiplicity="1" />
+    <End Role="TutorModule" Type="Self.TutorModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="Module_ID" />
+      </Principal>
+      <Dependent Role="TutorModule">
+        <PropertyRef Name="Module_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resource_Subject">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+    <End Role="Resource" Type="Self.Resource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="Subject_ID" />
+      </Principal>
+      <Dependent Role="Resource">
+        <PropertyRef Name="Subject_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Review_Tutor">
+    <End Role="Tutor" Type="Self.Tutor" Multiplicity="1" />
+    <End Role="Review" Type="Self.Review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tutor">
+        <PropertyRef Name="Tutor_ID" />
+      </Principal>
+      <Dependent Role="Review">
+        <PropertyRef Name="Tutor_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Session_Subject">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+    <End Role="Session" Type="Self.Session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="Subject_ID" />
+      </Principal>
+      <Dependent Role="Session">
+        <PropertyRef Name="Subject_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_StudentType">
+    <End Role="StudentType" Type="Self.StudentType" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentType">
+        <PropertyRef Name="StudentType_ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="StudentType_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UniversityStudent_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="UniversityStudent" Type="Self.UniversityStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="UniversityStudent">
+        <PropertyRef Name="Student_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TutorSubject_Subject">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+    <End Role="TutorSubject" Type="Self.TutorSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="Subject_ID" />
+      </Principal>
+      <Dependent Role="TutorSubject">
+        <PropertyRef Name="Subject_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tutor_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Tutor" Type="Self.Tutor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="Tutor">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TutorModule_Tutor">
+    <End Role="Tutor" Type="Self.Tutor" Multiplicity="1" />
+    <End Role="TutorModule" Type="Self.TutorModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tutor">
+        <PropertyRef Name="Tutor_ID" />
+      </Principal>
+      <Dependent Role="TutorModule">
+        <PropertyRef Name="Tutor_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TutorSubject_Tutor">
+    <End Role="Tutor" Type="Self.Tutor" Multiplicity="1" />
+    <End Role="TutorSubject" Type="Self.TutorSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tutor">
+        <PropertyRef Name="Tutor_ID" />
+      </Principal>
+      <Dependent Role="TutorSubject">
+        <PropertyRef Name="Tutor_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_UserType">
+    <End Role="UserType" Type="Self.UserType" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserType">
+        <PropertyRef Name="UserType_ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="UserType_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TUTPRO_Web_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="Applications" EntityType="Self.Application" />
+    <EntitySet Name="Bookings" EntityType="Self.Booking" />
+    <EntitySet Name="Degrees" EntityType="Self.Degree" />
+    <EntitySet Name="Demerits" EntityType="Self.Demerit" />
+    <EntitySet Name="Grades" EntityType="Self.Grade" />
+    <EntitySet Name="HighSchoolStudents" EntityType="Self.HighSchoolStudent" />
+    <EntitySet Name="Modules" EntityType="Self.Module" />
+    <EntitySet Name="Resources" EntityType="Self.Resource" />
+    <EntitySet Name="Reviews" EntityType="Self.Review" />
+    <EntitySet Name="Sessions" EntityType="Self.Session" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="StudentTypes" EntityType="Self.StudentType" />
+    <EntitySet Name="Subjects" EntityType="Self.Subject" />
+    <EntitySet Name="Tutors" EntityType="Self.Tutor" />
+    <EntitySet Name="TutorModules" EntityType="Self.TutorModule" />
+    <EntitySet Name="TutorSubjects" EntityType="Self.TutorSubject" />
+    <EntitySet Name="UniversityStudents" EntityType="Self.UniversityStudent" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+    <AssociationSet Name="FK_Admin_User" Association="Self.FK_Admin_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Admin" EntitySet="Admins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Application_User" Association="Self.FK_Application_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Application" EntitySet="Applications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Booking_Session" Association="Self.FK_Booking_Session">
+      <End Role="Session" EntitySet="Sessions" />
+      <End Role="Booking" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Booking_Student" Association="Self.FK_Booking_Student">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Booking" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Booking_Tutor" Association="Self.FK_Booking_Tutor">
+      <End Role="Tutor" EntitySet="Tutors" />
+      <End Role="Booking" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UniversityStudent_Degree" Association="Self.FK_UniversityStudent_Degree">
+      <End Role="Degree" EntitySet="Degrees" />
+      <End Role="UniversityStudent" EntitySet="UniversityStudents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Demerit_Student" Association="Self.FK_Demerit_Student">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="Demerit" EntitySet="Demerits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HighSchoolStudent_Grade" Association="Self.FK_HighSchoolStudent_Grade">
+      <End Role="Grade" EntitySet="Grades" />
+      <End Role="HighSchoolStudent" EntitySet="HighSchoolStudents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HighSchoolStudent_Student" Association="Self.FK_HighSchoolStudent_Student">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="HighSchoolStudent" EntitySet="HighSchoolStudents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resource_Module" Association="Self.FK_Resource_Module">
+      <End Role="Module" EntitySet="Modules" />
+      <End Role="Resource" EntitySet="Resources" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Session_Module" Association="Self.FK_Session_Module">
+      <End Role="Module" EntitySet="Modules" />
+      <End Role="Session" EntitySet="Sessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TutorModule_Module" Association="Self.FK_TutorModule_Module">
+      <End Role="Module" EntitySet="Modules" />
+      <End Role="TutorModule" EntitySet="TutorModules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resource_Subject" Association="Self.FK_Resource_Subject">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="Resource" EntitySet="Resources" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Review_Tutor" Association="Self.FK_Review_Tutor">
+      <End Role="Tutor" EntitySet="Tutors" />
+      <End Role="Review" EntitySet="Reviews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Session_Subject" Association="Self.FK_Session_Subject">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="Session" EntitySet="Sessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_StudentType" Association="Self.FK_Student_StudentType">
+      <End Role="StudentType" EntitySet="StudentTypes" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_User" Association="Self.FK_Student_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UniversityStudent_Student" Association="Self.FK_UniversityStudent_Student">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="UniversityStudent" EntitySet="UniversityStudents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TutorSubject_Subject" Association="Self.FK_TutorSubject_Subject">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="TutorSubject" EntitySet="TutorSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tutor_User" Association="Self.FK_Tutor_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Tutor" EntitySet="Tutors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TutorModule_Tutor" Association="Self.FK_TutorModule_Tutor">
+      <End Role="Tutor" EntitySet="Tutors" />
+      <End Role="TutorModule" EntitySet="TutorModules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TutorSubject_Tutor" Association="Self.FK_TutorSubject_Tutor">
+      <End Role="Tutor" EntitySet="Tutors" />
+      <End Role="TutorSubject" EntitySet="TutorSubjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_UserType" Association="Self.FK_User_UserType">
+      <End Role="UserType" EntitySet="UserTypes" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

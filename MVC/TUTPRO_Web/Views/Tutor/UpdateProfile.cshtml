@@ -1,0 +1,92 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="~/Images/newlogo-removebg-preview2.png" /></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 5em;">
+            <ul class="navbar-nav mr-auto" style="justify-content:space-around; width: 40vw; ">
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Home", "Tutor")">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Profile", "Tutor")">My Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Contact", "Tutor")">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("About", "Tutor")">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("googleDrive", "Tutor")">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("LogSession", "Tutor")">LogSession</a>
+                </li>
+
+            </ul>
+            <div style="width: 10%" />
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" style="text-decoration:none;">
+                    <a class="nav-link effect-underline" href="@Url.Action("Index", "Home")"><b>Sign Out</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="updateDiv" style="padding-top: 5%; background-color: #F8F9FA;">
+        <div class="updateDiv2">
+            <div class="RegForm"><h3>Update Details</h3></div>
+            <form action="@Url.Action("ChangesMade", "Tutor")">
+                <div id="RegName">
+                    <input class="firstnameReg" type="text" name="first_name" placeholder="Name" required> <br>
+                    <input class="lastnameReg" type="text" name="last_name" placeholder="Surname" required>
+                </div>
+
+                <input type="email" class="emailReg" id="email" name="email" required placeholder="Email"> <br />
+                <br>
+
+                <input type="text" class="usernameReg" id="username" name="username" required placeholder="Username"> <br />
+                <br>
+
+                <input type="password" class="passwordReg" id="passwordReg" placeholder="Enter Password" name="password" required>
+                <br>
+
+                <input type="password" class="confirmpasswordReg" id="confirmPasswordReg" placeholder="Confirm Password" name="confirmPassword" required> <br>
+
+                <input type="text" class="phonenumReg" id="phonenumber" name="phonenumber" required placeholder="Phone Number"> <br />
+                <br>
+
+
+
+                <div style="padding-left: 15%;">
+                    <input class="btn btn-dark" type="submit" name="updateprofile" value="Save Update">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

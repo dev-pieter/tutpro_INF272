@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3e17d2f21c154952916619ab424ca45d" Name="Diagram1">
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Admin" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Application" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Booking" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Degree" Width="1.5" PointX="11.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Demerit" Width="1.5" PointX="10.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Grade" Width="1.5" PointX="11.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.HighSchoolStudent" Width="1.5" PointX="13.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Module" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Resource" Width="1.5" PointX="11.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Review" Width="1.5" PointX="7.5" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Session" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Student" Width="1.5" PointX="8.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.StudentType" Width="1.5" PointX="6" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Subject" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.Tutor" Width="1.5" PointX="5.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.TutorModule" Width="1.5" PointX="7.5" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.TutorSubject" Width="1.5" PointX="10.5" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.UniversityStudent" Width="1.5" PointX="13.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.User" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TUTPRO_Web_dbModel.UserType" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Admin_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Application_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Booking_Session" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Booking_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Booking_Tutor" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_UniversityStudent_Degree" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Demerit_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_HighSchoolStudent_Grade" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_HighSchoolStudent_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Resource_Module" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Session_Module" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_TutorModule_Module" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Resource_Subject" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Review_Tutor" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Session_Subject" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Student_StudentType" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Student_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_UniversityStudent_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_TutorSubject_Subject" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_Tutor_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_TutorModule_Tutor" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_TutorSubject_Tutor" ManuallyRouted="false" />
+        <AssociationConnector Association="TUTPRO_Web_dbModel.FK_User_UserType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

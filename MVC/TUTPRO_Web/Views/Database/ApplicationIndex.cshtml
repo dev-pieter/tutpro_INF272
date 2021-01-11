@@ -1,0 +1,71 @@
+﻿@model IEnumerable<TUTPRO_Web.models.Application>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body style="background-color: #F8F9FA;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="~/Images/newlogo-removebg-preview2.png" /></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 5em;">
+            <ul class="navbar-nav mr-auto" style="justify-content:space-around; width: 40vw; ">
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Reports", "Admin")">Reports <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Database", "Admin")">Database</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("tutorApplications", "Admin")">Tutor Applications</a>
+                </li>
+            </ul>
+            <div style="width:10%" />
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" style="text-decoration:none;">
+                    <a class="nav-link effect-underline" href="@Url.Action("Index", "Home")"><b>Sign Out</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2>Applications</h2>
+
+    <p>
+        <a class="btn btn-primary" href="@Url.Action("ApplicationCreate") ">Add Application</a>
+    </p>
+
+    <table class="table table-hover" style="padding-top: 3%;">
+        <tr>
+            <th>Status</th>
+            <th>Name</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "ApplicationEdit", new { id = item.Application_ID }) |
+                    @Html.ActionLink("Delete", "ApplicationDelete", new { id = item.Application_ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>

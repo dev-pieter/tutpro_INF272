@@ -1,0 +1,75 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body style="background-color: #F8F9FA;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="~/Images/newlogo-removebg-preview2.png" /></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 5em;">
+            <ul class="navbar-nav mr-auto" style="justify-content:space-around; width: 40vw; ">
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Home", "Student")">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Profile", "Student")">My Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Contact", "Student")">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("About", "Student")">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Booking", "Student")">Bookings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("googleDrive", "Student")">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("ReviewTutor", "Student")">Review Tutor</a>
+                </li>
+
+            </ul>
+            <div style="width: 10%" />
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" style="text-decoration:none;">
+                    <a class="nav-link effect-underline" href="@Url.Action("Index", "Home")"><b>Sign Out</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="homeFirstDiv" style="padding-top: 5%;">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-last">
+                <div>
+                    <img src="~/Images/book-reading rm bg.png" style="float: right; padding-right: 35%; height: 400px; margin-top: -20px;">
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6" style="padding-left: 10%;">
+                <p>As students of the university of Pretoria, we have faced multiple difficulties and setbacks during our journey of being a student. </p>
+                <p>As such, we at TUTPro have embarked on a journey to make it easy for all other students who are in even worse situations that most of us.</p>
+                <p>If we do not have it, you do not need it. </p>
+
+                <p>Our goal entails ‘improving education’ and doing this by improving subject understanding, academic performance and strengthening learning skills through free online tutoring.</p>
+
+                <p>Online tutoring provides the supplemental skills-building that students require in a way that is significantly more cost-effective and convenient than traditional services. Whether you're a university student eager to improve your writing skills in order to craft a stellar thesis or a third grader in need of a little extra help with geometry homework, online tutors are ready and able to provide the instruction needed to stay on track.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

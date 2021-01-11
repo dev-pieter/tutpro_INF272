@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\Pieta\OneDrive\Documents\GitHub\272-Del3\272-Deliverable-Project\MVC\TUTPRO_Web\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\Pieta\OneDrive\Documents\GitHub\272-Del3\272-Deliverable-Project\MVC\TUTPRO_Web\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\Pieta\OneDrive\Documents\GitHub\272-Del3\272-Deliverable-Project\MVC\TUTPRO_Web\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

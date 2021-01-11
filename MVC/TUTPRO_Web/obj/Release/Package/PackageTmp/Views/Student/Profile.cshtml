@@ -1,0 +1,92 @@
+﻿@model IEnumerable<TUTPRO_Web.models.Student>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+</head>
+<body style="background-color: #F8F9FA;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="~/Images/newlogo-removebg-preview2.png" /></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 5em;">
+            <ul class="navbar-nav mr-auto" style="justify-content:space-around; width: 40vw; ">
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Home", "Student")">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Profile", "Student")">My Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Contact", "Student")">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("About", "Student")">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Booking", "Student")">Bookings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("googleDrive", "Student")">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("ReviewTutor", "Student")">Review Tutor</a>
+                </li>
+
+            </ul>
+            <div style="width: 10%" />
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" style="text-decoration:none;">
+                    <a class="nav-link effect-underline" href="@Url.Action("Index", "Home")"><b>Sign Out</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="homeFirstDiv" style="padding-top: 5%;">
+        <table class="table table-hover" style="padding-top: 3%;">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Surname</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Student Type</th>
+                    <th scope="col">My Demerits</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.User.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.User.Surname)</td>
+                        <td>@Html.DisplayFor(modelItem => item.User.Email)</td>
+                        <td>@Html.DisplayFor(modelItem => item.User.PhoneNo)</td>
+                        <td>@Html.DisplayFor(modelItem => item.StudentType.TypeofStudent)</td>
+                        <td>
+                            @Html.ActionLink("View Demerits", "MyDemerit", new { id = item.Student_ID })
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+        <a type="button " href="@Url.Action("UpdateProfile", "Student")" class="btn" style="color: #F8F9FA; background-color: #38B6FF; border-radius: 2px;">Update Details</a>
+
+    </div>
+</body>
+</html>

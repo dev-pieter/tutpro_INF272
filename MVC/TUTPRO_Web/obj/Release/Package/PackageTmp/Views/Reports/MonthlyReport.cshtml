@@ -1,0 +1,523 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+    <meta name=Generator content="Microsoft Word 15 (filtered)">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <style>
+        /* Style Definitions */
+        p.MsoNormal, li.MsoNormal, div.MsoNormal {
+            margin-top: 2.0pt;
+            margin-right: 0in;
+            margin-bottom: 2.0pt;
+            margin-left: 0in;
+            font-size: 10.0pt;
+            font-family: "Franklin Gothic Book",sans-serif;
+        }
+
+        h1 {
+            mso-style-link: "Heading 1 Char";
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: 3.0pt;
+            margin-left: 0in;
+            font-size: 12.0pt;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+            h1.CxSpFirst {
+                mso-style-link: "Heading 1 Char";
+                margin: 0in;
+                font-size: 12.0pt;
+                font-family: "Franklin Gothic Medium",sans-serif;
+                color: #006666;
+                text-transform: uppercase;
+            }
+
+            h1.CxSpMiddle {
+                mso-style-link: "Heading 1 Char";
+                margin: 0in;
+                font-size: 12.0pt;
+                font-family: "Franklin Gothic Medium",sans-serif;
+                color: #006666;
+                text-transform: uppercase;
+            }
+
+            h1.CxSpLast {
+                mso-style-link: "Heading 1 Char";
+                margin-top: 0in;
+                margin-right: 0in;
+                margin-bottom: 3.0pt;
+                margin-left: 0in;
+                font-size: 12.0pt;
+                font-family: "Franklin Gothic Medium",sans-serif;
+                color: #006666;
+                text-transform: uppercase;
+            }
+
+        h2 {
+            mso-style-link: "Heading 2 Char";
+            margin-top: 2.0pt;
+            margin-right: 0in;
+            margin-bottom: 0in;
+            margin-left: 0in;
+            page-break-after: avoid;
+            font-size: 10.0pt;
+            font-family: "Franklin Gothic Book",sans-serif;
+            color: white;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        p.MsoTitle, li.MsoTitle, div.MsoTitle {
+            mso-style-link: "Title Char";
+            margin-top: 20.0pt;
+            margin-right: 0in;
+            margin-bottom: 8.0pt;
+            margin-left: 0in;
+            text-align: center;
+            font-size: 36.0pt;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+        p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst {
+            mso-style-link: "Title Char";
+            margin-top: 20.0pt;
+            margin-right: 0in;
+            margin-bottom: 0in;
+            margin-left: 0in;
+            text-align: center;
+            font-size: 36.0pt;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+        p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle {
+            mso-style-link: "Title Char";
+            margin: 0in;
+            text-align: center;
+            font-size: 36.0pt;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+        p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast {
+            mso-style-link: "Title Char";
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: 8.0pt;
+            margin-left: 0in;
+            text-align: center;
+            font-size: 36.0pt;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+        span.TitleChar {
+            mso-style-name: "Title Char";
+            mso-style-link: Title;
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+        }
+
+        span.Heading1Char {
+            mso-style-name: "Heading 1 Char";
+            mso-style-link: "Heading 1";
+            font-family: "Franklin Gothic Medium",sans-serif;
+            color: #006666;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        span.Heading2Char {
+            mso-style-name: "Heading 2 Char";
+            mso-style-link: "Heading 2";
+            font-family: "Times New Roman",serif;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        p.Graphic, li.Graphic, div.Graphic {
+            mso-style-name: Graphic;
+            margin-top: 2.0pt;
+            margin-right: .7pt;
+            margin-bottom: 0in;
+            margin-left: 0in;
+            text-align: right;
+            font-size: 10.0pt;
+            font-family: "Franklin Gothic Book",sans-serif;
+        }
+
+        p.ContactInfo, li.ContactInfo, div.ContactInfo {
+            mso-style-name: "Contact Info";
+            margin-top: 2.0pt;
+            margin-right: 0in;
+            margin-bottom: 0in;
+            margin-left: 0in;
+            font-size: 12.0pt;
+            font-family: "Franklin Gothic Book",sans-serif;
+            color: #FEDE00;
+            font-weight: bold;
+        }
+
+        .MsoChpDefault {
+            font-size: 10.0pt;
+            font-family: "Franklin Gothic Book",sans-serif;
+            color: #595959;
+        }
+
+        .MsoPapDefault {
+            margin-top: 2.0pt;
+            margin-right: 0in;
+            margin-bottom: 2.0pt;
+            margin-left: 0in;
+        }
+        /* Page Definitions */
+        div.WordSection1 {
+            page: WordSection1;
+        }
+        /* List Definitions */
+        ol {
+            margin-bottom: 0in;
+        }
+
+        ul {
+            margin-bottom: 0in;
+        }
+        -->
+    </style>
+
+</head>
+
+<body lang=EN-US>
+
+    <div class=WordSection1>
+
+        <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.14%;border-collapse:
+ collapse'>
+            <tr style='height:80.85pt'>
+                <td width=18 valign=top style='width:13.5pt;background:#006666;padding:0in 0in 0in 0in;
+  height:80.85pt'>
+                    <p class=MsoNormal>&nbsp;</p>
+                </td>
+                <td width=516 style='width:387.0pt;border:none;border-right:solid white 4.5pt;
+  background:#006666;padding:0in 0in 0in 0in;height:80.85pt'>
+                    <p class=ContactInfo>TUTPRO</p>
+                    <p class=ContactInfo>57 West Lynwood Bridge, Pretoria, 0001</p>
+                    <p class=ContactInfo>tutpro@gmail.com</p>
+                    <p class=ContactInfo>0800420789</p>
+                </td>
+                <td width=222 style='width:166.5pt;border:none;background:#006666;padding:
+  0in 0in 0in 0in;height:80.85pt'>
+                    <p class=Graphic>
+                        <img width=124 height=179
+                             src="~/Images/newlogo-removebg-preview2.png" align=left hspace=12>
+                    </p>
+                </td>
+                <td width=12 valign=top style='width:9.0pt;background:#006666;padding:0in 0in 0in 0in;
+  height:80.85pt'>
+                    <p class=Graphic><span style='color:#006666'>&nbsp;</span></p>
+                </td>
+                <td style='border:none;padding:0in 0in 0in 0in' width=1><p class='MsoNormal'>&nbsp;</td>
+            </tr>
+            <tr style='height:58.35pt'>
+                <td width=769 colspan=5 valign=bottom style='width:576.8pt;padding:0in 0in 0in 0in;
+  height:58.35pt'>
+                    <p class=MsoTitle>Monthly report</p>
+                </td>
+            </tr>
+            <tr style='height:.6in'>
+                <td width=769 colspan=5 valign=bottom style='width:576.8pt;border:none;
+  border-bottom:solid #FEDE00 2.25pt;padding:0in 0in 0in 0in;height:.6in'>
+                    <h1>Report summary</h1>
+                </td>
+            </tr>
+            <tr style='height:.15in'>
+                <td width=769 colspan=5 valign=top style='width:576.8pt;border:none;
+  padding:0in 0in 0in 0in;height:.15in'>
+                    <p class=MsoNormal>&nbsp;</p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=StatusReportTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="78%" style='width:78.76%;border-collapse:
+ collapse'>
+            <tr style='height:16.55pt'>
+                <td width=246 valign=top style='width:184.3pt;border:none;border-right:solid white 1.5pt;
+  background:#006666;padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <h2><span style='font-family:"Franklin Gothic Medium",sans-serif'>Report Date</span></h2>
+                </td>
+                <td width=359 valign=top style='width:269.3pt;border:none;background:#006666;
+  padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <h2><span style='font-family:"Franklin Gothic Medium",sans-serif'>Prepared By</span></h2>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=246 valign=top style='width:184.3pt;border-top:solid white 1.5pt;
+  border-left:none;border-bottom:none;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><span style='color:black'>25/08/2020</span></p>
+                </td>
+                <td width=359 valign=top style='width:269.3pt;border:none;border-top:solid white 1.5pt;
+  background:#E5EAEE;padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><span style='color:black'>Mr MI Chhaya</span></p>
+                </td>
+            </tr>
+        </table>
+
+        <p class=MsoNormal>&nbsp;</p>
+
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.14%;border-collapse:
+ collapse;border:none'>
+            <tr style='height:.5in'>
+                <td width=769 valign=bottom style='width:576.8pt;border:none;border-bottom:
+  solid #FEDE00 2.25pt;padding:0in 0in 0in 0in;height:.5in'>
+                    <h1>Number of users</h1>
+                </td>
+            </tr>
+            <tr style='height:.15in'>
+                <td width=769 style='width:576.8pt;border:none;padding:0in 0in 0in 0in;
+  height:.15in'>
+                    <p class=MsoNormal style='margin-bottom:0in'>&nbsp;</p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=StatusReportTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="46%" style='width:46.76%;border-collapse:
+ collapse'>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:2.0in;border:none;border-right:solid white 1.5pt;
+  background:#006666;padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <h2><span style='font-family:"Franklin Gothic Medium",sans-serif'>Total</span></h2>
+                </td>
+                <td width=167 valign=top style='width:125.35pt;border:none;background:#006666;
+  padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <h2>
+                        <span style='font-family:"Franklin Gothic Medium",sans-serif'>
+                            Joint this
+                            month
+                        </span>
+                    </h2>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:2.0in;border-top:solid white 1.5pt;
+  border-left:none;border-bottom:none;border-right:solid white 1.5pt;
+  background:#E5EAEE;padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span style='color:black'>50</span></b></p>
+                </td>
+                <td width=167 valign=top style='width:125.35pt;border:none;border-top:solid white 1.5pt;
+  background:#E5EAEE;padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span style='color:black'>4</span></b></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.14%;border-collapse:
+ collapse;border:none'>
+            <tr style='height:.5in'>
+                <td width=769 valign=bottom style='width:576.8pt;border:none;border-bottom:
+  solid #FEDE00 2.25pt;padding:0in 0in 0in 0in;height:.5in'>
+                    <h1>Number of active users</h1>
+                </td>
+            </tr>
+            <tr style='height:.15in'>
+                <td width=769 style='width:576.8pt;border:none;padding:0in 0in 0in 0in;
+  height:.15in'>
+                    <p class=MsoNormal style='margin-bottom:0in'>&nbsp;</p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=StatusReportTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="25%" style='width:25.0%;border-collapse:
+ collapse'>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:2.0in;background:#006666;padding:0in 5.4pt 0in 5.4pt;
+  height:16.55pt'>
+                    <h2><span style='font-family:"Franklin Gothic Medium",sans-serif'>Total</span></h2>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=192 valign=top style='width:2.0in;border:none;border-top:solid white 1.5pt;
+  background:#E5EAEE;padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span style='color:black'>35</span></b></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.14%;border-collapse:
+ collapse;border:none'>
+            <tr style='height:.5in'>
+                <td width=769 valign=bottom style='width:576.8pt;border:none;border-bottom:
+  solid #FEDE00 2.25pt;padding:0in 0in 0in 0in;height:.5in'>
+                    <h1>Number of inactive users</h1>
+                </td>
+            </tr>
+            <tr style='height:.15in'>
+                <td width=769 style='width:576.8pt;border:none;padding:0in 0in 0in 0in;
+  height:.15in'>
+                    <p class=MsoNormal style='margin-bottom:0in'>&nbsp;</p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=StatusReportTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="24%" style='width:24.6%;border-collapse:
+ collapse'>
+            <tr style='height:16.55pt'>
+                <td width=189 valign=top style='width:141.7pt;background:#006666;padding:
+  0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <h2><span style='font-family:"Franklin Gothic Medium",sans-serif'>total</span></h2>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=189 valign=top style='width:141.7pt;border:none;border-top:solid white 1.5pt;
+  background:#E5EAEE;padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span style='color:black'>15</span></b></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.14%;border-collapse:
+ collapse;border:none'>
+            <tr style='height:.5in'>
+                <td width=769 valign=bottom style='width:576.8pt;border:none;border-bottom:
+  solid #FEDE00 2.25pt;padding:0in 0in 0in 0in;height:.5in'>
+                    <h1>Number of documents uploaded</h1>
+                </td>
+            </tr>
+            <tr style='height:.15in'>
+                <td width=769 style='width:576.8pt;border:none;padding:0in 0in 0in 0in;
+  height:.15in'>
+                    <p class=MsoNormal style='margin-bottom:0in'>&nbsp;</p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=StatusReportTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="24%" style='width:24.6%;border-collapse:
+ collapse'>
+            <tr style='height:16.55pt'>
+                <td width=189 valign=top style='width:141.7pt;background:#006666;padding:
+  0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <h2><span style='font-family:"Franklin Gothic Medium",sans-serif'>total</span></h2>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=189 valign=top style='width:141.7pt;border:none;border-top:solid white 1.5pt;
+  background:#E5EAEE;padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span style='color:black'>74</span></b></p>
+                </td>
+            </tr>
+        </table>
+
+        <p class=MsoNormal>&nbsp;</p>
+
+        <p class=MsoNormal>&nbsp;</p>
+
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.14%;border-collapse:
+ collapse;border:none'>
+            <tr style='height:.5in'>
+                <td width=769 valign=bottom style='width:576.8pt;border:none;border-bottom:
+  solid #FEDE00 2.25pt;padding:0in 0in 0in 0in;height:.5in'>
+                    <h1>Number of registered sessions</h1>
+                </td>
+            </tr>
+            <tr style='height:.15in'>
+                <td width=769 style='width:576.8pt;border:none;padding:0in 0in 0in 0in;
+  height:.15in'>
+                    <p class=MsoNormal style='margin-bottom:0in'>&nbsp;</p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=StatusReportTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="24%" style='width:24.6%;border-collapse:
+ collapse'>
+            <tr style='height:16.55pt'>
+                <td width=189 valign=top style='width:141.7pt;background:#006666;padding:
+  0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <h2><span style='font-family:"Franklin Gothic Medium",sans-serif'>total</span></h2>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=189 valign=top style='width:141.7pt;border:none;border-top:solid white 1.5pt;
+  background:#E5EAEE;padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span style='color:black'>123</span></b></p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="100%" style='width:100.14%;border-collapse:
+ collapse;border:none'>
+            <tr style='height:.5in'>
+                <td width=769 valign=bottom style='width:576.8pt;border:none;border-bottom:
+  solid #FEDE00 2.25pt;padding:0in 0in 0in 0in;height:.5in'>
+                    <h1>Total number of hours tutored</h1>
+                </td>
+            </tr>
+            <tr style='height:.15in'>
+                <td width=769 style='width:576.8pt;border:none;padding:0in 0in 0in 0in;
+  height:.15in'>
+                    <p class=MsoNormal style='margin-bottom:0in'>&nbsp;</p>
+                </td>
+            </tr>
+        </table>
+
+        <table class=StatusReportTable border=0 cellspacing=0 cellpadding=0
+               summary="Header layout table" width="24%" style='width:24.6%;border-collapse:
+ collapse'>
+            <tr style='height:16.55pt'>
+                <td width=189 valign=top style='width:141.7pt;background:#006666;padding:
+  0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <h2><span style='font-family:"Franklin Gothic Medium",sans-serif'>total</span></h2>
+                </td>
+            </tr>
+            <tr style='height:16.55pt'>
+                <td width=189 valign=top style='width:141.7pt;border:none;border-top:solid white 1.5pt;
+  background:#E5EAEE;padding:0in 5.4pt 0in 5.4pt;height:16.55pt'>
+                    <p class=MsoNormal><b><span style='color:black'>220</span></b></p>
+                </td>
+            </tr>
+        </table>
+
+        <p class=MsoNormal>&nbsp;</p>
+
+    </div>
+    <!--<div style="padding:3em">-->
+        @*<a class="btn btn-success" href="@Url.Action("ExportMonthly", "Reports")">Export As PDF</a>*@
+        @*<button class="btn btn-success">Export As PDF</button>*@
+    <!--</div>-->
+</body>
+
+</html>
+

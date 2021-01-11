@@ -1,0 +1,219 @@
+﻿
+@{
+    Layout = null;
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="~/Images/newlogo-removebg-preview2.png" /></a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 5em;">
+            <ul class="navbar-nav mr-auto" style="justify-content:space-around; width: 40vw; ">
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Home", "Tutor")">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Profile", "Tutor")">My Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("Contact", "Tutor")">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("About", "Tutor")">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("googleDrive", "Tutor")">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link effect-underline" href="@Url.Action("LogSession", "Tutor")">LogSession</a>
+                </li>
+
+            </ul>
+            <div style="width: 10%" />
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" style="text-decoration:none;">
+                    <a class="nav-link effect-underline" href="@Url.Action("Index", "Home")"><b>Sign Out</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="homeFirstDiv" style="padding-top: 5% ;">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-last">
+                <div>
+                    <img src="~/Images/reading-transparent.png" style="float: right; ; height: 300px;">
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6" style="padding-left: 200px;">
+                <h2>100% Online</h2>
+                <br/>
+                <p>In these hard and unpredictable times you do not have to fall behind on your studies!<br/>
+                   At TUTPro we pride ourselves with our range of subject tuitions.<br/>
+                   If we do not have it, you do not need it. </p>
+                <br/>
+                <a type="button " href="@Url.Action("FindTutor", "Tutor")" class="btn" style="color: #F8F9FA; background-color: #38B6FF; border-radius: 2px;">Find Tutor</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="homeSecondDiv" style="background-color:#38B6FF; padding-bottom: 5%;">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-last" style="padding-top: 100px;">
+                <h2>Have a Question?</h2>
+                <br/>
+                <div style="width: 70%">
+                    <p>Ask one of our qualified tutors today! <br/>
+                       Our tutors are available during normal tutor sessions, but you can also email at your own convenience.</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6" style="padding-right: 150px ;padding-top: 25px;">
+                <img src="~/Images/perfect_score_transparent-removebg-preview.png" style="float: right; ; height: 300px;">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="homeFirstDiv" style="padding-top: 5%; padding-bottom: 5%;">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-last">
+                <div>
+                    <img src="~/Images/student no bg.png" style="float: right; ; height: 350px;">
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6" style="padding-left: 200px;">
+                <h2>Become a Tutor Today!</h2>
+                <br/>
+                <p>Do you feel like you have valuable knowledge that you could pass on?<br/>
+                   Register today and become part of the TUTPro family! Enjoy meal coupons and much more. </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer -->
+    <div>
+        <!-- Footer -->
+        <footer class="page-footer font-small unique-color-dark " style="background-color:#475159">
+
+            <div style="background-color: #44befb;">
+                <div class="">
+
+                    <!-- Grid row-->
+                    <div class="row py-4 d-flex align-items-center">
+
+                        <!-- Grid column -->
+                        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                            <h6 class="mb-0" style="text-align:center">Get connected with us on social networks!</h6>
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                            <!-- Facebook -->
+                            <a class="fb-ic">
+                                <i class="fab fa-facebook-f white-text mr-4"> </i>
+                            </a>
+                            <!-- Twitter -->
+                            <a class="tw-ic">
+                                <i class="fab fa-twitter white-text mr-4"> </i>
+                            </a>
+                            <!-- Google +-->
+                            <a class="gplus-ic">
+                                <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                            </a>
+                            <!--Linkedin -->
+                            <a class="li-ic">
+                                <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                            </a>
+                            <!--Instagram-->
+                            <a class="ins-ic">
+                                <i class="fab fa-instagram white-text"> </i>
+                            </a>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row-->
+
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class=" text-center text-md-left mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" style="color:whitesmoke">
+
+                        <!-- Content -->
+                        <h6 class="text-uppercase font-weight-bold">TUT PRO</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            In these hard and unpredictable times you do not have to fall behind on your studies!
+                            At TUTPro we pride ourselves with our range of subject tuitions.
+                            If we do not have it, you do not need it.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" style="color:whitesmoke; text-align:start">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <i class="fas fa-home mr-3">57 West Lynwood bridge</i>
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope">queries@TUTPRO.com</i> 
+                        </p>
+                        <p>
+                            <i class="fab fa-whatsapp-square">+ 01 234 567 88</i> 
+                        </p>
+                        <p>
+                            <i class="fas fa-print mr-3">+ 01 234 567 89</i> 
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+            <br/>
+            <!-- Footer Links -->
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3" style="text-align:center">
+                © 2020 Copyright:
+                <a href="#"> TUTPRO</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>
+

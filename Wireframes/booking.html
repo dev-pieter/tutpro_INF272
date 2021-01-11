@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+  <div style="max-height: 160px; width: 100%;">  
+    <div style ="background-color: #F8F9FA ;">
+      <img src = "newlogo-removebg-preview2.png" class = "logocompany">
+      <nav class="navbar navbar-expand navbar-light bg-light" style="max-height: 100px; padding-left: 170px; padding-bottom: 10%;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class = "hero" style="padding-bottom: 200px; padding-left: 0%;">
+          <div class = "navbarHero">
+              <ul class="ulHero">
+              <li><a href='home.html'>Home</a></li>
+              <li><a href='profile.html'>My Profile</a></li>
+              <li><a href='contact.html'>Contact</a></li>
+              <li><a href='about.html'>About</a></li>
+              <li><a href='booking.html'>Bookings</a></li>
+              <li><a href='googledrive.html'>Resources</a></li>
+              <li><a href='LogSession.html'>Log Session</a></li>
+              <li><a href='ReviewTutor.html'>Review Tutor</a></li>
+              <li><a href='index.html'>Sign Out</a></li>
+              </ul>
+          </div>
+    </div>
+        
+      </nav>
+    </div>      
+    
+  </div>
+
+<!--Fix styling for bookings basically-->
+<div class="calendar" style="padding-top: 5%; background-color:#F8F9FA">
+  <iframe src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%234285F4&amp;ctz=Africa%2FJohannesburg&amp;src=dTE4MDU5NTA0QHR1a3MuY28uemE&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4uc2EjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%2333B679&amp;color=%230B8043&amp;showTitle=0&amp;showNav=0&amp;showTz=0&amp;showCalendars=0&amp;showTabs=0&amp;mode=WEEK&amp;showPrint=0" style="border-width:0" width="800" height="400" frameborder="0" scrolling="no"></iframe>
+  <div class="input">
+    <h3>Choose session</h3>
+    <p style="padding-bottom: 20px;">See the sessions on the calendar to the left</p>
+    <select class="form-control" id="list" style="width: 200px; margin-bottom: 20px;">
+      <option>Session 1</option>
+      <option>Session 2</option>
+      <option>Session 3</option>
+      <option>Session 4</option>
+    </select>
+    <input class="btn btn-dark" type="submit" value="Submit" >
+  </div>
+</div>
+
+      <!-- <div class="col-6">
+        <h3 style="color:black">Register a session</h3>
+        <p>Register the session prior to tutoring</p><br>
+        
+        <div style="margin-right:85% ">
+            <form action="RegisterSuccess.html" >
+                Session start:
+                <input class="form-control"  type="time" id="start" name="start" min="7:00" max="18:00" required><br>
+                Session end:
+                <input class="form-control"  type="time" id="end" name="end" min="8:00" max="19:00" required><br>
+                <input class="btn btn-dark" type="submit" value="Submit" >
+            </form>
+        </div>
+      </div> -->
+
+ 
+</body>
+</html>
